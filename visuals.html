@@ -3,84 +3,139 @@
 <head>
     <meta charset="utf-8">
     <title>Visualizations – UK Road Accident Analysis</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background: #f8f8f8; }
-        .nav a { margin-right: 15px; text-decoration: none; color: #0066cc; }
-        .nav { margin-bottom: 20px; }
-        .chart { background: #ffffff; padding: 20px 25px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 0 6px rgba(0,0,0,0.08); }
-        img { width: 95%; max-width: 1000px; border-radius: 6px; }
-        h1 { margin-top: 0; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="nav">
-    <a href="index.html">Introduction</a>
-    <a href="visuals.html">Visualizations</a>
-    <a href="conclusion.html">Conclusion</a>
-</div>
+<header>
+    <div class="header-inner">
+        <div class="brand">
+            <div class="brand-badge">UK</div>
+            <span>Road Accident Analysis</span>
+        </div>
+        <nav>
+            <a href="index.html">Introduction</a>
+            <a href="visuals.html" class="active">Visualizations</a>
+            <a href="conclusion.html">Conclusion</a>
+        </nav>
+    </div>
+</header>
 
-<h1>Visualizations</h1>
+<main class="page-shell">
+    <section class="card">
+        <span class="chip">Visual Story</span>
+        <h1>Exploring the data through 10 visualizations</h1>
+        <p style="color:#6b7280;">
+            Each chart below focuses on a specific question about road accidents in the UK.
+            Together, they build a full picture of when, where and why accidents occur.
+        </p>
+    </section>
 
-<div class="chart">
-    <h2>1. Accident Map – Number of Casualties</h2>
-    <p>Each point shows a crash location in the UK. The colour and density of points highlight accident hotspots.</p>
-    <img src="chart1_map_casualties.png" alt="Map of casualties in UK">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">1. Accident Map – Number of Casualties</h2>
+            <span class="chart-tag">Geospatial</span>
+        </div>
+        <p>This map plots accidents using latitude and longitude. Dense clusters show
+           accident hotspots with more casualties.</p>
+        <img src="chart1_map_casualties.png" alt="Map of casualties in the UK">
+    </section>
 
-<div class="chart">
-    <h2>2. Average Speed Limit by Accident Severity</h2>
-    <p>This bar chart compares average speed limits for accidents with different severity levels.</p>
-    <img src="chart2_speed_severity.png" alt="Average speed limit by accident severity">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">2. Average Speed Limit by Accident Severity</h2>
+            <span class="chart-tag">Comparison</span>
+        </div>
+        <p>The bar chart compares average speed limits for accidents of different severity
+           levels, highlighting that severe accidents tend to occur on faster roads.</p>
+        <img src="chart2_speed_severity.png" alt="Average speed limit by accident severity">
+    </section>
 
-<div class="chart">
-    <h2>3. Number of Accidents by Day of Week</h2>
-    <p>Here we count accidents for each day of the week to see which days are riskier.</p>
-    <img src="chart3_dayofweek.png" alt="Accidents by day of week">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">3. Number of Accidents by Day of Week</h2>
+            <span class="chart-tag">Temporal</span>
+        </div>
+        <p>This view counts accidents for each day of the week to reveal which days are
+           riskier for drivers.</p>
+        <img src="chart3_dayofweek.png" alt="Accidents by day of week">
+    </section>
 
-<div class="chart">
-    <h2>4. Distribution of Accidents by Light Conditions</h2>
-    <p>The bubble chart shows how many accidents happen in daylight, darkness and other light conditions.</p>
-    <img src="chart4_light_conditions.png" alt="Light conditions chart">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">4. Distribution of Accidents by Light Conditions</h2>
+            <span class="chart-tag">Conditions</span>
+        </div>
+        <p>The bubble chart shows how many accidents happen in daylight, darkness and other
+           light conditions.</p>
+        <img src="chart4_light_conditions.png" alt="Light conditions chart">
+    </section>
 
-<div class="chart">
-    <h2>5. Accidents by Junction Control Type</h2>
-    <p>This treemap splits accidents by junction control, such as signals, give-way or uncontrolled junctions.</p>
-    <img src="chart5_junction_control.png" alt="Junction control treemap">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">5. Accidents by Junction Control Type</h2>
+            <span class="chart-tag">Road design</span>
+        </div>
+        <p>This treemap splits accidents by junction control (signals, give-way or
+           uncontrolled), helping to spot junction types with higher accident counts.</p>
+        <img src="chart5_junction_control.png" alt="Junction control treemap">
+    </section>
 
-<div class="chart">
-    <h2>6. Geographic Distribution of Vehicles Involved</h2>
-    <p>A second map focusing on how many vehicles are involved at each accident location.</p>
-    <img src="chart6_vehicle_map.png" alt="Vehicle map">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">6. Geographic Distribution of Vehicles Involved</h2>
+            <span class="chart-tag">Geospatial</span>
+        </div>
+        <p>A second map focuses on how many vehicles are involved at each accident location,
+           highlighting areas with frequent multi-vehicle crashes.</p>
+        <img src="chart6_vehicle_map.png" alt="Vehicle map">
+    </section>
 
-<div class="chart">
-    <h2>7. Yearly Trend of Accidents by Weather Conditions</h2>
-    <p>Stacked bars show how accident counts change over years and how they are split by weather conditions.</p>
-    <img src="chart7_year_weather.png" alt="Yearly accidents by weather">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">7. Yearly Trend of Accidents by Weather Conditions</h2>
+            <span class="chart-tag">Trend</span>
+        </div>
+        <p>Stacked bars show how accident counts change over the years and how they are
+           divided across different weather conditions.</p>
+        <img src="chart7_year_weather.png" alt="Yearly accidents by weather">
+    </section>
 
-<div class="chart">
-    <h2>8. Distribution of Accidents by Road Surface Conditions</h2>
-    <p>This pie chart shows the share of casualties on dry, wet, flooded and other road surfaces.</p>
-    <img src="chart8_road_surface.png" alt="Road surface pie chart">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">8. Distribution of Accidents by Road Surface Conditions</h2>
+            <span class="chart-tag">Conditions</span>
+        </div>
+        <p>The pie chart shows the share of casualties on dry, wet, flooded and other
+           road surfaces.</p>
+        <img src="chart8_road_surface.png" alt="Road surface pie chart">
+    </section>
 
-<div class="chart">
-    <h2>9. Scatter Plot – Number of Vehicles vs Number of Casualties</h2>
-    <p>Each point represents one accident. It helps us see how the number of vehicles relates to the number of casualties.</p>
-    <img src="chart9_scatter_vehicles.png" alt="Scatter plot: vehicles vs casualties">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">9. Scatter Plot – Vehicles vs Casualties</h2>
+            <span class="chart-tag">Relationship</span>
+        </div>
+        <p>Each point represents an accident and helps us see how the number of vehicles
+           involved relates to the number of casualties.</p>
+        <img src="chart9_scatter_vehicles.png" alt="Scatter plot: vehicles vs casualties">
+    </section>
 
-<div class="chart">
-    <h2>10. Police Force by Weather Conditions</h2>
-    <p>This chart estimates how much police effort is associated with accidents in different weather conditions.</p>
-    <img src="chart10_police_weather.png" alt="Police force by weather chart">
-</div>
+    <section class="chart">
+        <div class="chart-header">
+            <h2 class="chart-title">10. Police Force by Weather Conditions</h2>
+            <span class="chart-tag">Impact</span>
+        </div>
+        <p>This chart estimates how much police effort is associated with accidents in
+           different weather conditions.</p>
+        <img src="chart10_police_weather.png" alt="Police force by weather chart">
+    </section>
+</main>
+
+<footer>
+    <small>UK Road Accident Analysis – Visualizations</small>
+</footer>
 
 </body>
 </html>
